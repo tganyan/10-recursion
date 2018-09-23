@@ -1,4 +1,4 @@
-# Linked Lists
+# Linked Lists With Recusrion ![travis build status](https://travis-ci.com/tganyan/10-recursion.svg?branch=master)
 
 This is a project for understanding and working with linked lists. Particularly, the objective here is to take an existing bit of code that is manipulating a linked list, add a method for removing an item from the linked list, and test that method.
 
