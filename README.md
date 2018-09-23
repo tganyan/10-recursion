@@ -1,46 +1,73 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Recursive Linked List Data Structure
-====
+# Linked Lists With Recusrion ![travis build status](https://travis-ci.com/tganyan/10-recursion.svg?branch=master)
 
-## To Submit this Assignment
-  * Do all your work in a public repository called `data-structures-and-algorithms`
-  * write all of your code in a directory named `linked-lists`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+This is a project for understanding and working with linked lists. Particularly, the objective here is to take an existing bit of code that is manipulating a linked list, add a method for removing an item from the linked list, and test that method.
 
-## Requirements  
-#### Configuration  
-  <!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include  
-  * **index.js** -- The entry point to your module
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.travis.yml** -- travis-ci instructions
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **__tests__/** -- directory for holding your programs unit and integration tests
+This is a rehash of the original lab, but removing an item with recursion rather than looping.
 
-#### Testing  
-  * write at least two tests for each method of the Singly Linked List Data Structure
-  * organize your tests into appropriate describe/it blocks for test output readability
+## Getting Started
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-#### Feature Tasks  
-* implement a Singly Linked List (SLL) data structure
-* implement a recursive `remove(offset)` methods to the SLL class
-  * offset is an integer representing how many nodes to traverse before removal
-	* the head of the linked lists represents offset 0
-* in a comment within each function, note the it's Big-O runtime
+### Prerequisites
 
-#### Stretch Goals
-* implement recursive `append(value)`, `prepend(value)`, `reverse()` methods to the SLL class
+You must have NodeJS installed along with either NPM or Yarn.
+
+### Installing
+
+Copy the link from the github repository
+In the command line, navigate to the parent directory where you want to store this project
+In the command line, type:
+```
+git clone <repository url>
+```
+Once the project files are there, type:
+```
+npm install
+```
+or
+```
+yarn i
+```
+
+To test the LinkedList methods within scope of linked-list.js, use:
+```
+const newList = new LinkedList();
+
+for (let i = 0; i < LIST_LENGTH; i++) {
+  newList.insertAtHead(`SOME_VALUE`);
+}
+
+newList.METHOD_NAME
+```
+
+## Running the tests
+
+There are two tests for this program:
+
+1. One test to ensure the correct value is removed from the linked list with the .remove() method
+2. One test to ensure an exception is thrown if trying to remove an item from an empty list
+
+I chose to just use the same tests as the original lab, with some slight adjustments so that the method is working off the offset and not a direct value.
+
+To run the tests, from the command line type:
+```
+npm run test
+```
+or
+````
+yarn run test
+````
+
+## Built With
+
+* [NodeJS](https://nodejs.org) - The javascript runtime used
+* [Jest](https://jestjs.io/) - Testing platform used
+* [Eslint](https://eslint.org/) - Coding style linter
+
+## Authors
+
+* [**Tyler Anyan** ](http://tyleranyan.com/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
